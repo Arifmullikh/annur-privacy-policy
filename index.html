@@ -1,79 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - AN-NUR Quran</title>
-<style>
-:root{--primary:#1b5e20;--text:#2c3e50;--bg:#f8fafc;--card-bg:#fff;--border:#e2e8f0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;color:var(--text);background:var(--bg);margin:0;padding:40px 20px}
-.container{max-width:800px;margin:0 auto;background:var(--card-bg);padding:40px;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.05);border:1px solid var(--border)}
-h1{color:var(--primary);font-size:28px;margin-top:0;padding-bottom:12px;border-bottom:2px solid #e8f5e9}
-h2{color:#2e7d32;font-size:20px;margin-top:30px}
-p,li{font-size:15px;color:#374151}ul{padding-left:20px}li{margin-bottom:8px}
-.badge{display:inline-block;background:#e8f5e9;color:#1b5e20;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:600;margin-bottom:20px}
-.footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--border);font-size:14px;color:#6b7280}
-a{color:#2e7d32;text-decoration:none}a:hover{text-decoration:underline}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f6">
+  <meta name="description" content="An-Nur privacy policy: what stays on your device, what optional Google sign-in and cloud sync do, and how to manage or delete your data.">
+  <title>Privacy Policy — An-Nur</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f8f6;
+      --surface: #fff;
+      --ink: #17221e;
+      --muted: #69756f;
+      --line: #e4e9e5;
+      --green: #087a61;
+      --green-dark: #075d4b;
+      --green-wash: #e9f3ef;
+      --warm: #f3f0e9;
+      --max: 1040px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Bengali", "Nirmala UI", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: var(--paper);
+      color: var(--ink);
+      scroll-behavior: smooth;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; line-height: 1.72; }
+    a { color: var(--green-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--green); }
+    .topbar { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid #e4e9e5c7; background: #f7f8f6eF; backdrop-filter: blur(18px); }
+    .topbar-inner { width: min(var(--max), calc(100% - 48px)); min-height: 64px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--ink); font-size: 15px; font-weight: 720; letter-spacing: -.02em; text-decoration: none; }
+    .brand-logo { width: 40px; height: 40px; margin-right: 10px; border: 1px solid #252525; border-radius: 10px; object-fit: cover; vertical-align: -12px; }
+    .top-actions { display: flex; align-items: center; gap: 18px; }
+    nav { display: flex; gap: 19px; }
+    nav a { color: var(--muted); font-size: 12px; text-decoration: none; }
+    .language { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 99px; background: white; }
+    .language button { border: 0; border-radius: 99px; padding: 6px 10px; color: var(--muted); background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+    .language button[aria-pressed="true"] { color: white; background: var(--green); }
+    .hero { padding: clamp(64px, 10vw, 116px) 24px 74px; text-align: center; background: radial-gradient(ellipse at 50% 0%, #e5f0eb 0, #f7f8f6 58%); }
+    .hero-inner { max-width: 780px; margin: auto; }
+    .hero-logo { display: block; width: 84px; height: 84px; margin: 0 auto 22px; border: 1px solid #252525; border-radius: 18px; object-fit: cover; box-shadow: 0 10px 28px #10181418; }
+    .eyebrow { margin: 0 0 17px; color: var(--green); font-size: 12px; font-weight: 720; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 0 auto; font-size: clamp(40px, 7vw, 72px); font-weight: 650; letter-spacing: -.065em; line-height: 1.04; }
+    .hero-lede { max-width: 660px; margin: 25px auto 0; color: #53615b; font-size: clamp(17px, 2vw, 20px); line-height: 1.6; }
+    .updated { margin: 22px 0 0; color: var(--muted); font-size: 13px; }
+    .hero-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; border: 1px solid var(--green); border-radius: 99px; color: white; background: var(--green); font-size: 14px; font-weight: 650; text-decoration: none; transition: background .18s ease, transform .18s ease; }
+    .button:hover { color: white; background: var(--green-dark); transform: translateY(-1px); }
+    .button.secondary { color: var(--green-dark); background: transparent; }
+    .button.secondary:hover { background: var(--green-wash); }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: auto; }
+    .summary { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); margin: -28px auto 72px; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: 0 16px 50px #173b2a0b; }
+    .summary-item { padding: 24px 26px; }
+    .summary-item + .summary-item { border-left: 1px solid var(--line); }
+    .summary-item strong { display: block; margin-bottom: 6px; font-size: 15px; font-weight: 680; letter-spacing: -.02em; }
+    .summary-item span { display: block; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); align-items: start; gap: 70px; padding-bottom: 96px; }
+    .contents { position: sticky; top: 92px; padding: 9px 0; }
+    .contents-label { margin: 0 0 13px; color: #8a958f; font-size: 11px; font-weight: 740; letter-spacing: .1em; text-transform: uppercase; }
+    .contents a { display: block; padding: 6px 0; color: #66736d; font-size: 12px; line-height: 1.4; text-decoration: none; }
+    .contents a:hover { color: var(--green); }
+    article { min-width: 0; }
+    .intro-note { margin: 0 0 22px; padding: 19px 21px; border: 1px solid #d9e9e1; border-radius: 16px; background: var(--green-wash); color: #38584c; font-size: 14px; }
+    .section { padding: 31px 0 34px; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+    .section:first-of-type { padding-top: 16px; }
+    .section:last-of-type { border-bottom: 0; }
+    .section-kicker { margin: 0 0 7px; color: var(--green); font-size: 11px; font-weight: 720; letter-spacing: .1em; text-transform: uppercase; }
+    h2 { margin: 0 0 13px; font-size: clamp(23px, 3vw, 30px); font-weight: 660; letter-spacing: -.045em; line-height: 1.2; }
+    h3 { margin: 23px 0 7px; font-size: 16px; font-weight: 680; letter-spacing: -.02em; }
+    p { margin: 10px 0; color: #46544d; font-size: 14px; }
+    ul { margin: 10px 0 12px; padding-left: 21px; color: #46544d; font-size: 14px; }
+    li { margin: 5px 0; padding-left: 2px; }
+    .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 17px; }
+    .data-card { padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .data-card h3 { margin: 0 0 7px; }
+    .data-card p { margin: 0; font-size: 13px; }
+    .callout { margin: 18px 0 4px; padding: 16px 18px; border-left: 3px solid #af8751; border-radius: 0 12px 12px 0; background: var(--warm); color: #645743; font-size: 13px; }
+    .provider-list { display: grid; gap: 0; margin-top: 15px; border-top: 1px solid var(--line); }
+    .provider { display: grid; grid-template-columns: minmax(130px, .8fr) 1.5fr; gap: 18px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+    .provider strong { color: var(--ink); font-weight: 650; }
+    .provider span { color: var(--muted); }
+    .provider a { margin-left: 4px; white-space: nowrap; }
+    .contact { margin-top: 19px; padding: 22px; border-radius: 18px; background: #edf2ee; }
+    .contact p { margin: 6px 0; }
+    footer { padding: 25px 24px 35px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 12px; }
+    footer a { color: var(--muted); }
+    [hidden] { display: none !important; }
+    @media (max-width: 820px) {
+      nav { display: none; }
+      .layout { grid-template-columns: 1fr; gap: 18px; }
+      .contents { position: static; display: flex; flex-wrap: wrap; gap: 6px 15px; padding: 0 0 13px; border-bottom: 1px solid var(--line); }
+      .contents-label { width: 100%; margin-bottom: 1px; }
+      .contents a { padding: 4px 0; }
+      .summary { margin-bottom: 48px; }
+    }
+    @media (max-width: 560px) {
+      .topbar-inner, .wrap { width: min(100% - 32px, var(--max)); }
+      .topbar-inner { min-height: 58px; }
+      .hero { padding: 63px 18px 67px; }
+      .summary { grid-template-columns: 1fr; margin-top: -22px; border-radius: 18px; }
+      .summary-item { padding: 16px 19px; }
+      .summary-item + .summary-item { border-top: 1px solid var(--line); border-left: 0; }
+      .layout { padding-bottom: 65px; }
+      .data-grid { grid-template-columns: 1fr; }
+      .provider { grid-template-columns: 1fr; gap: 2px; }
+      .intro-note { font-size: 13px; }
+      .brand { font-size: 14px; }
+    }
+    @media print {
+      :root { background: white; }
+      .topbar, .hero-links, .contents { display: none !important; }
+      .hero { padding: 24px 0; background: white; text-align: left; }
+      .hero-inner { max-width: none; }
+      h1 { margin: 0; font-size: 38px; }
+      .wrap { width: 100%; }
+      .summary { margin: 18px 0; box-shadow: none; }
+      .layout { display: block; padding-bottom: 0; }
+      .section, .data-card, .contact { break-inside: avoid; }
+      p, li, .provider span { color: #222; }
+      a { color: #222; }
+      footer { padding: 16px 0; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Privacy Policy</h1>
-<div class="badge">AN-NUR Quran (com.annur.quran)</div>
-<p><strong>Last updated:</strong> October 25, 2026</p>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="An-Nur privacy policy home"><img class="brand-logo" src="an_nur_logo.png" alt="">AN-NUR</a>
+      <div class="top-actions">
+        <nav class="lang-en" aria-label="Policy sections">
+          <a href="#data">Data</a><a href="#sync">Cloud sync</a><a href="#choices">Your choices</a><a href="#contact">Contact</a>
+        </nav>
+        <nav class="lang-bn" aria-label="নীতিমালার বিভাগ" hidden>
+          <a href="#data-bn">তথ্য</a><a href="#sync-bn">ক্লাউড সিঙ্ক</a><a href="#choices-bn">আপনার নিয়ন্ত্রণ</a><a href="#contact-bn">যোগাযোগ</a>
+        </nav>
+        <div class="language" role="group" aria-label="Choose language">
+          <button type="button" data-language="en" aria-pressed="true">English</button>
+          <button type="button" data-language="bn" aria-pressed="false">বাংলা</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<p><strong>AN-NUR</strong> ("we", "our", or "the app") is an ad-free 15-line Hafezi Quran reader with recitation audio, prayer times, Adhan, Qibla and other Islamic features. The Quran pages are stored inside the app and can be read fully offline. Some features use the internet, as explained below. We are committed to protecting your privacy.</p>
+  <section class="hero" id="top">
+    <div class="hero-inner lang-en">
+      <img class="hero-logo" src="an_nur_logo.png" alt="An-Nur logo">
+      <p class="eyebrow">An-Nur · Privacy</p>
+      <h1>Your reading is personal.<br>So is your data.</h1>
+      <p class="hero-lede">An-Nur is designed to work on your device. You choose whether to connect a Google account and whether to turn on cloud sync.</p>
+      <p class="updated">Effective date: 29 October 2026</p>
+      <div class="hero-links"><a class="button" href="#data">Read the policy</a><a class="button secondary" href="account-deletion.html">Account deletion</a></div>
+    </div>
+    <div class="hero-inner lang-bn" hidden>
+      <img class="hero-logo" src="an_nur_logo.png" alt="আন-নূর লোগো">
+      <p class="eyebrow">আন-নূর · গোপনীয়তা</p>
+      <h1>আপনার পড়া ব্যক্তিগত।<br>আপনার তথ্যও।</h1>
+      <p class="hero-lede">আন-নূর আপনার ফোনেই ব্যবহার করার জন্য তৈরি। Google অ্যাকাউন্টে যুক্ত হবেন কি না এবং ক্লাউড সিঙ্ক চালু করবেন কি না—সিদ্ধান্ত আপনার।</p>
+      <p class="updated">কার্যকর: ২৯ অক্টোবর ২০২৬</p>
+      <div class="hero-links"><a class="button" href="#data-bn">নীতিমালা পড়ুন</a><a class="button secondary" href="account-deletion.html">অ্যাকাউন্ট মুছুন</a></div>
+    </div>
+  </section>
 
-<h2>1. Information We Collect</h2>
-<p><strong>AN-NUR does not collect, store on any server, sell, or share your personal information.</strong></p>
-<ul>
-<li><strong>No Account Required:</strong> There is no registration or login.</li>
-<li><strong>No Analytics or Tracking:</strong> The app contains no analytics, crash-reporting, or tracking SDKs.</li>
-<li><strong>No Advertising:</strong> The app is 100% ad-free and contains no ad networks.</li>
-</ul>
+  <div class="wrap">
+    <section class="summary lang-en" aria-label="Privacy summary">
+      <div class="summary-item"><strong>Works without an account</strong><span>Reading and local features do not require Google sign-in.</span></div>
+      <div class="summary-item"><strong>Sync is your choice</strong><span>Signing in does not upload your app records. You enable sync separately.</span></div>
+      <div class="summary-item"><strong>Your notes stay local by default</strong><span>Quran bookmark notes need a second, separate sync choice. Journal entries and photos stay on this device.</span></div>
+    </section>
+    <section class="summary lang-bn" aria-label="গোপনীয়তার সারাংশ" hidden>
+      <div class="summary-item"><strong>অ্যাকাউন্ট ছাড়াই ব্যবহার</strong><span>কুরআন পড়া ও স্থানীয় ফিচার চালাতে Google-এ সাইন ইন দরকার নেই।</span></div>
+      <div class="summary-item"><strong>সিঙ্ক আপনার সিদ্ধান্ত</strong><span>সাইন ইন করলেই অ্যাপের তথ্য আপলোড হয় না। সিঙ্ক আলাদাভাবে চালু করতে হয়।</span></div>
+      <div class="summary-item"><strong>নোট ডিফল্টে ফোনেই থাকে</strong><span>কুরআন বুকমার্কের নোট সিঙ্কে আলাদা সম্মতি লাগে। জার্নাল ও ছবি ফোনেই থাকে।</span></div>
+    </section>
 
-<h2>2. Location</h2>
-<p>If you allow location access, the app uses your device's location only to calculate prayer times and the Qibla direction. To get accurate prayer times, your approximate coordinates (latitude and longitude) are sent over an encrypted HTTPS connection to the Aladhan prayer-times service (api.aladhan.com). The coordinates are used only to return prayer times; we do not store them on any server or use them for any other purpose. Location is optional: you can deny the permission and the rest of the app keeps working.</p>
+    <div class="layout lang-en">
+      <aside class="contents" aria-label="Table of contents">
+        <p class="contents-label">On this page</p>
+        <a href="#data">Information we handle</a><a href="#use">How it is used</a><a href="#sync">Google account &amp; sync</a><a href="#third-parties">Other services</a><a href="#choices">Your choices</a><a href="#retention">Retention &amp; deletion</a><a href="#security">Security</a><a href="#changes">Changes &amp; contact</a>
+      </aside>
+      <article>
+        <p class="intro-note">In short: An-Nur keeps most app records on your device. It sends only the information needed for a feature you choose—such as a prayer-time request, an online Quran search, or cloud sync that you turn on.</p>
 
-<h2>3. Internet Features</h2>
-<p>The app connects to the following public services only to download content you request. No personal information is sent to them:</p>
-<ul>
-<li>Quran recitation audio (everyayah.com, api.quran.com)</li>
-<li>Quran text and translations (api.quran.com, api.alquran.cloud)</li>
-<li>Hadith collections (cdn.jsdelivr.net)</li>
-<li>Adhan audio (cdn.aladhan.com)</li>
-<li>Live Makkah and Madinah broadcasts (Saudi Broadcasting Authority streams)</li>
-<li>Ruqyah audio (islamicapi.com)</li>
-</ul>
-<p>These services may receive standard technical information such as your IP address, as with any internet connection. Their own privacy policies apply to that information.</p>
-<p>Links for feedback (Google Forms), WhatsApp, Google Maps (nearby mosques) and Google Play open in your browser or the related app and are governed by those services' policies.</p>
+        <section class="section" id="data">
+          <p class="section-kicker">01 · Information</p>
+          <h2>Information An-Nur handles</h2>
+          <p>“Personal data” can include information that identifies you as well as private records you choose to save. Some reading and worship records may reveal personal religious interests. We treat them with care and explain when they leave your device.</p>
+          <div class="data-grid">
+            <div class="data-card"><h3>Saved on your device</h3><p>Quran bookmarks, bookmark notes, reading position and history, goals and khatam records; prayer, fasting, tasbih and missed-prayer trackers; Hadith bookmarks; app language and display preferences; selected location and reminder settings; journal entries and photos; and audio or PDF files you choose to download. If you export a local backup, it is saved to the location you select. These records are not sent to An-Nur cloud sync except for the specific categories listed below.</p></div>
+            <div class="data-card"><h3>Google sign-in</h3><p>If you choose Google sign-in, Google and Firebase Authentication process the account information needed to authenticate you, such as your Google account identifier, email address and basic profile details (for example, display name when available). Firebase assigns an account ID used to associate your cloud records. Signing in alone does not upload your reading or tracker data.</p></div>
+            <div class="data-card"><h3>Location and prayer times</h3><p>If you choose a current or saved location for prayer-time features, An-Nur uses its coordinates and your time zone to request prayer times from the AlAdhan API. The coordinates in that request are rounded to three decimal places. Your location is stored locally for the feature and is not part of Firebase cloud sync.</p></div>
+            <div class="data-card"><h3>Requests for online content</h3><p>When you use online search, tafsir, recitation, Hadith, daily-ayah, Ruqyah, or live-stream features, the relevant service receives the request needed to provide that content. A request can identify a passage, search words, language, audio selection or stream. Internet services also normally receive technical connection details such as IP address, request time, app/device and network information.</p></div>
+          </div>
+          <div class="callout">An-Nur does not receive your fingerprint or face data. If you use the optional journal lock with Android biometrics, Android handles the biometric check and tells the app only whether it succeeded. Any journal PIN verifier is stored locally; the PIN is not uploaded.</div>
+        </section>
 
-<h2>4. Device Permissions</h2>
-<ul>
-<li><strong>INTERNET &amp; ACCESS_NETWORK_STATE:</strong> To download recitation audio, translations, hadith and prayer times, and play live streams.</li>
-<li><strong>ACCESS_FINE_LOCATION &amp; ACCESS_COARSE_LOCATION:</strong> Optional, for prayer times and Qibla direction.</li>
-<li><strong>POST_NOTIFICATIONS:</strong> For Adhan, prayer and reading reminders, and the audio player notification.</li>
-<li><strong>SCHEDULE_EXACT_ALARM:</strong> To play the Adhan and reminders at the exact time.</li>
-<li><strong>USE_FULL_SCREEN_INTENT:</strong> To show the Adhan screen at prayer time, only if you enable it.</li>
-<li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> To keep Quran recitation and Adhan playing in the background.</li>
-<li><strong>RECEIVE_BOOT_COMPLETED:</strong> To restore your alarms after the device restarts.</li>
-<li><strong>VIBRATE &amp; WAKE_LOCK:</strong> For alerts and uninterrupted playback.</li>
-</ul>
-<p>The app does not access your camera, microphone, contacts, or files.</p>
+        <section class="section" id="use">
+          <p class="section-kicker">02 · Purpose</p>
+          <h2>How information is used</h2>
+          <p>We use information only to provide the feature you requested: remember your local reading and app settings, calculate or retrieve prayer times, provide online Quran and Islamic content, authenticate your optional account, synchronize the records you selected, handle support or deletion requests, and protect the app and its services.</p>
+          <p>The Android app build covered by this policy does not include advertising, Firebase Analytics, or crash-reporting SDKs. The developer does not sell your personal data or use An-Nur account-sync records to target advertisements. Google, Firebase, Android, and content providers may process operational information under their own service terms and privacy policies.</p>
+          <p>An-Nur does not create an advertising profile from your Quran reading, search, prayer or fasting records.</p>
+        </section>
 
-<h2>5. Local Data Storage</h2>
-<p>Your bookmarks, notes, settings, last-read page, downloaded audio and cached prayer times are stored only on your device. You can delete them anytime by clearing the app data or uninstalling the app.</p>
+        <section class="section" id="sync">
+          <p class="section-kicker">03 · Optional account</p>
+          <h2>Google account and cloud sync</h2>
+          <h3>Signing in and syncing are separate</h3>
+          <p>You can use An-Nur without an account. If you sign in, sync remains off until you turn it on under <strong>Settings → Account &amp; Sync</strong> and confirm the choice. You can turn sync off there at any time. Turning it off stops future sync; it does not by itself delete information already in your cloud account.</p>
+          <h3>What sync can include</h3>
+          <p>When enabled, An-Nur syncs these selected records to Cloud Firestore under your Firebase account ID:</p>
+          <ul><li>Quran bookmarks, reading position and progress, reading history, goals and khatam records;</li><li>selected Quran reading/display preferences;</li><li>prayer attendance, fasting, tasbih and missed-prayer tracker records; and</li><li>Hadith bookmarks.</li></ul>
+          <p>Quran bookmark notes are excluded unless you separately enable note sync after reviewing its consent message. If two devices have conflicting edits, the app may store both versions in a private conflict record until you choose which one to keep.</p>
+          <h3>What sync does not include</h3>
+          <p>Cloud sync excludes your location, prayer/reminder schedules, journal entries and photos, downloaded audio/PDF files, exported local backup files, and the Quran content bundled with the app. These stay on your device or in the local destination you selected. Android system backup may separately copy some local app preferences if device backup is enabled; that backup is managed by Android/your Google account and is not removed by deleting An-Nur cloud data.</p>
+        </section>
 
-<h2>6. Children's Privacy</h2>
-<p>The app does not knowingly collect personal information from anyone, including children.</p>
+        <section class="section" id="third-parties">
+          <p class="section-kicker">04 · Service providers</p>
+          <h2>Services outside An-Nur</h2>
+          <p>Some features connect directly to third-party services. Those providers may receive your IP address, request time, technical connection information and the specific content request. They operate under their own privacy practices; the developer does not control their independent retention or processing.</p>
+          <div class="provider-list">
+            <div class="provider"><strong>Google Identity &amp; Firebase</strong><span>Optional Google sign-in, Firebase Authentication and Cloud Firestore sync. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase privacy and security</a></span></div>
+            <div class="provider"><strong>AlAdhan</strong><span>Prayer-time requests, including rounded coordinates and time zone when location-based times are requested. <a href="https://aladhan.com/" target="_blank" rel="noopener noreferrer">Service website</a></span></div>
+            <div class="provider"><strong>Quran.com / Quran Foundation</strong><span>Online Quran search, word/verse content, translations, tafsir and recitation requests. A search request includes the words you enter. <a href="https://quran.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></span></div>
+            <div class="provider"><strong>AlQuran.cloud</strong><span>Daily-ayah text requests when that content is fetched online. <a href="https://alquran.cloud/terms-and-conditions" target="_blank" rel="noopener noreferrer">Service terms</a></span></div>
+            <div class="provider"><strong>EveryAyah, jsDelivr, IslamicAPI and AlAdhan CDN</strong><span>Recitation, Hadith, Ruqyah and Adhan audio or content delivery. <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer">jsDelivr privacy policy</a></span></div>
+            <div class="provider"><strong>Other apps and websites</strong><span>If you open a map, broadcaster stream, feedback form or other external link, the destination provider receives your request under its own policy. You can choose whether to open these features.</span></div>
+          </div>
+          <p>Requests to these services are made over HTTPS where the service supports it. The app does not send your journal, journal photos, or Firebase sync records to these content providers.</p>
+        </section>
 
-<h2>7. Changes to This Privacy Policy</h2>
-<p>We may update this policy from time to time. Changes will be posted on this page with a new "Last updated" date.</p>
+        <section class="section" id="choices">
+          <p class="section-kicker">05 · Control</p>
+          <h2>Your choices and controls</h2>
+          <ul><li><strong>Use without an account:</strong> continue with local use; Google sign-in is optional.</li><li><strong>Manage sync:</strong> open Settings → Account &amp; Sync to enable, disable or manage sync and separately choose Quran-note sync.</li><li><strong>Manage location:</strong> deny or revoke location permission in Android settings, or choose a location manually. Location-based prayer times may be less convenient or unavailable without a location.</li><li><strong>Manage notifications:</strong> control notification and alarm permissions in Android settings and manage reminders in the app.</li><li><strong>Delete local records:</strong> use in-app controls where provided, clear An-Nur storage, or uninstall the app. Android backups are managed separately in the device's backup settings.</li><li><strong>Ask for help:</strong> email the developer for privacy, access, correction or deletion questions. We may need to verify you own the account before acting.</li></ul>
+        </section>
 
-<h2>8. Contact Us</h2>
-<ul><li><strong>Email:</strong> <a href="mailto:arifmullikh.personal@gmail.com">arifmullikh.personal@gmail.com</a></li></ul>
+        <section class="section" id="retention">
+          <p class="section-kicker">06 · Retention</p>
+          <h2>How long information is kept</h2>
+          <p>Local information remains on your device until you remove it, clear app storage or uninstall An-Nur. A separate Android device backup may remain until you manage or remove that backup.</p>
+          <p>Firebase account information and cloud-synced records remain associated with your account until you delete the account or request deletion. When cloud deletion is requested, the app removes the account's An-Nur sync records and conflict records, then deletes the Firebase Authentication account. Google may retain limited service logs or backup copies for the periods described in its service terms and privacy information.</p>
+          <p>Turning sync off, signing out, clearing local app storage or uninstalling the app does not delete cloud data. To remove cloud data, use the in-app account deletion control or submit a request through the <a href="account-deletion.html">account deletion page</a>.</p>
+        </section>
 
-<div class="footer">&copy; 2026 AM Core Studios. All rights reserved.</div>
-</div>
+        <section class="section" id="security">
+          <p class="section-kicker">07 · Security</p>
+          <h2>Protecting your information</h2>
+          <p>An-Nur uses Firebase Authentication and Cloud Firestore for optional account and sync features. Firebase documents encryption in transit and encryption at rest for Firestore. The Firestore rules supplied with the app are written to restrict each account to its own records. Those rules must be published and kept active in the Firebase project for that restriction to apply; deployed project settings determine actual access.</p>
+          <p>Cloud sync is <strong>not end-to-end encrypted</strong>: it uses Firebase's service encryption, not a private encryption key held only by you. The developer's Firebase project administrators and Google, as service provider, may technically process cloud data as permitted by their service roles and terms. Do not enable sync for information you need to keep readable only by you.</p>
+          <p>No internet service or storage method can be guaranteed completely secure. Keep your Google account secure, use a device screen lock, and sign out on devices you no longer use.</p>
+          <p><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Read Firebase's privacy and security information</a>.</p>
+        </section>
+
+        <section class="section" id="changes">
+          <p class="section-kicker">08 · Updates</p>
+          <h2>Changes to this policy</h2>
+          <p>We may update this policy when the app's features, service providers or legal requirements change. The current version and effective date will be published on this page. If a change materially affects how optional cloud data is handled, we will make the updated information available in the app or on this page before or when the change takes effect, as appropriate.</p>
+          <div class="contact" id="contact">
+            <h3>Questions or privacy requests?</h3>
+            <p>Contact the An-Nur developer at <a href="mailto:arifmullikh.personal@gmail.com">arifmullikh.personal@gmail.com</a>.</p>
+            <p>For account deletion, use the in-app option at <strong>Settings → Account &amp; Sync → Delete account</strong>, or visit the <a href="account-deletion.html">account deletion request page</a>. Never email your password, Google sign-in token or verification code.</p>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <div class="layout lang-bn" hidden>
+      <aside class="contents" aria-label="সূচিপত্র">
+        <p class="contents-label">এই পাতায়</p>
+        <a href="#data-bn">কী তথ্য ব্যবহার হয়</a><a href="#use-bn">কেন ব্যবহার হয়</a><a href="#sync-bn">Google অ্যাকাউন্ট ও সিঙ্ক</a><a href="#third-parties-bn">অন্যান্য সেবা</a><a href="#choices-bn">আপনার নিয়ন্ত্রণ</a><a href="#retention-bn">সংরক্ষণ ও মুছে ফেলা</a><a href="#security-bn">নিরাপত্তা</a><a href="#changes-bn">যোগাযোগ</a>
+      </aside>
+      <article>
+        <p class="intro-note">সংক্ষেপে: আন-নূরের বেশিরভাগ তথ্য আপনার ফোনেই থাকে। কোনো ফিচার ব্যবহার করলে—যেমন নামাজের সময় চাওয়া, অনলাইনে কুরআন খোঁজা, অথবা আপনার চালু করা ক্লাউড সিঙ্ক—সেই ফিচারের জন্য যতটুকু দরকার ততটুকুই পাঠানো হয়।</p>
+        <section class="section" id="data-bn">
+          <p class="section-kicker">০১ · তথ্য</p><h2>আন-নূর কোন তথ্য ব্যবহার করে</h2>
+          <p>আপনাকে শনাক্ত করতে পারে এমন তথ্যের পাশাপাশি, আপনি অ্যাপে যে ব্যক্তিগত রেকর্ড সংরক্ষণ করেন সেগুলোও এই নীতিতে “তথ্য” হিসেবে ধরা হয়েছে। পড়া বা ইবাদতের কিছু রেকর্ড থেকে ব্যক্তিগত ধর্মীয় আগ্রহ বোঝা যেতে পারে। তাই কোন তথ্য ফোনের বাইরে যায়, তা এখানে আলাদা করে বলা হয়েছে।</p>
+          <div class="data-grid">
+            <div class="data-card"><h3>ফোনে সংরক্ষিত তথ্য</h3><p>কুরআনের বুকমার্ক ও নোট, পড়ার অবস্থান ও ইতিহাস, লক্ষ্য ও খতমের হিসাব; নামাজ, রোজা, তাসবিহ ও কাজা ট্র্যাকার; হাদিস বুকমার্ক; ভাষা ও প্রদর্শনের পছন্দ; নির্বাচিত লোকেশন ও রিমাইন্ডার সেটিংস; জার্নাল ও ছবি; এবং আপনার ডাউনলোড করা অডিও/PDF। লোকাল backup export করলে ফাইলটি আপনার বেছে নেওয়া জায়গায় থাকে। নিচে আলাদা করে যে তথ্যগুলো বলা হয়েছে, শুধু সেগুলোই আপনার সম্মতিতে ক্লাউড সিঙ্ক হতে পারে।</p></div>
+            <div class="data-card"><h3>Google সাইন-ইন</h3><p>আপনি Google দিয়ে সাইন-ইন করলে Google ও Firebase Authentication পরিচয় যাচাইয়ের জন্য প্রয়োজনীয় তথ্য প্রক্রিয়া করে—যেমন Google অ্যাকাউন্টের পরিচিতি, ইমেইল ঠিকানা এবং পাওয়া গেলে নামের মতো সাধারণ প্রোফাইল তথ্য। Firebase একটি অ্যাকাউন্ট আইডি তৈরি করে, যেটির সঙ্গে ক্লাউড রেকর্ড যুক্ত হয়। শুধু সাইন-ইন করলেই পড়া বা ট্র্যাকারের তথ্য আপলোড হয় না।</p></div>
+            <div class="data-card"><h3>লোকেশন ও নামাজের সময়</h3><p>নামাজের সময়ের জন্য আপনি বর্তমান বা সংরক্ষিত লোকেশন বেছে নিলে আন-নূর তার স্থানাঙ্ক ও সময় অঞ্চল AlAdhan API-তে পাঠায়। অনুরোধে স্থানাঙ্ক তিন ঘর দশমিক পর্যন্ত গোল করা হয়। ফিচারের জন্য লোকেশন ফোনে থাকে; Firebase ক্লাউড সিঙ্কে যায় না।</p></div>
+            <div class="data-card"><h3>অনলাইন কনটেন্টের অনুরোধ</h3><p>অনলাইন সার্চ, তাফসির, তিলাওয়াত, হাদিস, দৈনিক আয়াত, রুকইয়াহ বা লাইভ স্ট্রিম ব্যবহার করলে সংশ্লিষ্ট সেবা কনটেন্ট দিতে প্রয়োজনীয় অনুরোধ পায়। অনুরোধে নির্দিষ্ট আয়াত, সার্চের শব্দ, ভাষা, অডিও নির্বাচন বা স্ট্রিমের তথ্য থাকতে পারে। ইন্টারনেট সেবা সাধারণত IP address, অনুরোধের সময়, অ্যাপ/ডিভাইস ও নেটওয়ার্কের মতো সংযোগ-সংক্রান্ত তথ্যও পায়।</p></div>
+          </div>
+          <div class="callout">আন-নূর আপনার আঙুলের ছাপ বা মুখের তথ্য পায় না। ঐচ্ছিক জার্নাল লকে Android biometrics ব্যবহার করলে যাচাইটি Android করে; অ্যাপ শুধু সফল হয়েছে কি না জানতে পারে। জার্নাল PIN-এর যাচাই-তথ্য ফোনে থাকে; PIN আপলোড হয় না।</div>
+        </section>
+        <section class="section" id="use-bn">
+          <p class="section-kicker">০২ · ব্যবহার</p><h2>তথ্য কেন ব্যবহার হয়</h2>
+          <p>আপনার চাওয়া ফিচার চালাতেই তথ্য ব্যবহার হয়: ফোনে পড়া ও অ্যাপের পছন্দ মনে রাখা, নামাজের সময় হিসাব বা আনা, অনলাইন কুরআন ও ইসলামিক কনটেন্ট দেখানো, ঐচ্ছিক অ্যাকাউন্ট যাচাই, আপনার বেছে নেওয়া রেকর্ড সিঙ্ক, সহায়তা বা মুছে ফেলার অনুরোধ সামলানো এবং অ্যাপ ও সেবার নিরাপত্তা বজায় রাখা।</p>
+          <p>এই নীতির জন্য দেখা অ্যাপ বিল্ডে বিজ্ঞাপন, Firebase Analytics বা crash-reporting SDK নেই। ডেভেলপার আপনার ব্যক্তিগত তথ্য বিক্রি করেন না এবং আন-নূর সিঙ্কের তথ্য দিয়ে বিজ্ঞাপন লক্ষ্য করেন না। Google, Firebase, Android ও কনটেন্ট সেবাগুলো নিজ নিজ শর্ত ও গোপনীয়তা নীতি অনুযায়ী সেবার কার্যক্রম-সংক্রান্ত তথ্য প্রক্রিয়া করতে পারে।</p>
+          <p>আপনার কুরআন পড়া, সার্চ, নামাজ বা রোজার রেকর্ড থেকে আন-নূর বিজ্ঞাপনের প্রোফাইল তৈরি করে না।</p>
+        </section>
+        <section class="section" id="sync-bn">
+          <p class="section-kicker">০৩ · ঐচ্ছিক অ্যাকাউন্ট</p><h2>Google অ্যাকাউন্ট ও ক্লাউড সিঙ্ক</h2>
+          <h3>সাইন-ইন আর সিঙ্ক আলাদা</h3><p>অ্যাকাউন্ট ছাড়াই আন-নূর ব্যবহার করা যায়। Google-এ সাইন-ইন করলেও <strong>Settings → Account &amp; Sync</strong> থেকে আলাদা করে সিঙ্ক চালু ও নিশ্চিত না করা পর্যন্ত সিঙ্ক বন্ধ থাকে। যেকোনো সময় সেখান থেকে সিঙ্ক বন্ধ করতে পারবেন। বন্ধ করলে এরপরের সিঙ্ক থামে, কিন্তু আগে ক্লাউডে যাওয়া তথ্য নিজে থেকে মুছে যায় না।</p>
+          <h3>সিঙ্কে কী থাকতে পারে</h3><p>সিঙ্ক চালু থাকলে নিচের নির্বাচিত রেকর্ডগুলো আপনার Firebase অ্যাকাউন্ট আইডির অধীনে Cloud Firestore-এ রাখা হয়:</p>
+          <ul><li>কুরআনের বুকমার্ক, পড়ার অবস্থান ও অগ্রগতি, পড়ার ইতিহাস, লক্ষ্য ও খতমের হিসাব;</li><li>কুরআন পড়া ও দেখানোর কিছু পছন্দ;</li><li>নামাজ, রোজা, তাসবিহ ও কাজা ট্র্যাকারের রেকর্ড; এবং</li><li>হাদিস বুকমার্ক।</li></ul>
+          <p>কুরআনের বুকমার্কের নোট আলাদা সম্মতি দিয়ে নোট সিঙ্ক চালু না করলে বাদ থাকে। দুই ডিভাইসে একই তথ্যের আলাদা পরিবর্তন থাকলে কোনটি রাখবেন বেছে নেওয়া পর্যন্ত অ্যাপ দুই কপিই একটি ব্যক্তিগত conflict রেকর্ডে রাখতে পারে।</p>
+          <h3>সিঙ্কে যা যায় না</h3><p>লোকেশন, নামাজ/রিমাইন্ডারের সময়সূচি, জার্নাল ও ছবি, ডাউনলোড করা অডিও/PDF, export করা local backup ফাইল এবং অ্যাপের সঙ্গে থাকা কুরআনের কনটেন্ট ক্লাউড সিঙ্কে যায় না। এগুলো ফোনে বা আপনার বেছে নেওয়া local জায়গায় থাকে। Android device backup চালু থাকলে Android আলাদাভাবে কিছু স্থানীয় অ্যাপ পছন্দ কপি করতে পারে; সেই ব্যাকআপ Android/আপনার Google অ্যাকাউন্টের নিয়ন্ত্রণে থাকে এবং আন-নূরের ক্লাউড তথ্য মোছার সঙ্গে মুছে যায় না।</p>
+        </section>
+        <section class="section" id="third-parties-bn">
+          <p class="section-kicker">০৪ · সেবা প্রদানকারী</p><h2>আন-নূরের বাইরের সেবা</h2>
+          <p>কিছু ফিচার সরাসরি বাইরের সেবার সঙ্গে যুক্ত হয়। সেই সেবা আপনার IP address, অনুরোধের সময়, সংযোগ-প্রযুক্তির তথ্য ও নির্দিষ্ট কনটেন্টের অনুরোধ পেতে পারে। তাদের নিজস্ব গোপনীয়তা নীতি অনুযায়ী তারা তথ্য প্রক্রিয়া করে; তাদের নিজস্ব সংরক্ষণ বা ব্যবহারের ওপর ডেভেলপারের নিয়ন্ত্রণ নেই।</p>
+          <div class="provider-list">
+            <div class="provider"><strong>Google Identity ও Firebase</strong><span>ঐচ্ছিক Google সাইন-ইন, Firebase Authentication ও Cloud Firestore সিঙ্ক। <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google গোপনীয়তা নীতি</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase গোপনীয়তা ও নিরাপত্তা</a></span></div>
+            <div class="provider"><strong>AlAdhan</strong><span>লোকেশনভিত্তিক সময় চাইলে গোল করা স্থানাঙ্ক ও সময় অঞ্চলসহ নামাজের সময়ের অনুরোধ। <a href="https://aladhan.com/" target="_blank" rel="noopener noreferrer">সেবার ওয়েবসাইট</a></span></div>
+            <div class="provider"><strong>Quran.com / Quran Foundation</strong><span>অনলাইন কুরআন সার্চ, শব্দ/আয়াত, অনুবাদ, তাফসির ও তিলাওয়াতের অনুরোধ। সার্চে আপনার লেখা শব্দ পাঠানো হয়। <a href="https://quran.com/privacy" target="_blank" rel="noopener noreferrer">গোপনীয়তা নীতি</a></span></div>
+            <div class="provider"><strong>AlQuran.cloud</strong><span>অনলাইনে দৈনিক আয়াতের কনটেন্ট চাইলে সেই অনুরোধ। <a href="https://alquran.cloud/terms-and-conditions" target="_blank" rel="noopener noreferrer">সেবার শর্ত</a></span></div>
+            <div class="provider"><strong>EveryAyah, jsDelivr, IslamicAPI ও AlAdhan CDN</strong><span>তিলাওয়াত, হাদিস, রুকইয়াহ ও আজানের অডিও বা কনটেন্ট সরবরাহ। <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer">jsDelivr গোপনীয়তা নীতি</a></span></div>
+            <div class="provider"><strong>অন্যান্য অ্যাপ ও ওয়েবসাইট</strong><span>ম্যাপ, সম্প্রচারকের স্ট্রিম, মতামত ফর্ম বা অন্য বাইরের লিংক খুললে গন্তব্য সেবা নিজ নীতি অনুযায়ী আপনার অনুরোধ পায়। এসব ফিচার খোলা আপনার সিদ্ধান্ত।</span></div>
+          </div>
+          <p>এসব সেবায় অনুরোধ HTTPS দিয়ে পাঠানো হয়—যেখানে সেবাটি তা সমর্থন করে। আপনার জার্নাল, জার্নালের ছবি বা Firebase সিঙ্কের রেকর্ড কনটেন্ট প্রদানকারীদের কাছে পাঠানো হয় না।</p>
+        </section>
+        <section class="section" id="choices-bn">
+          <p class="section-kicker">০৫ · নিয়ন্ত্রণ</p><h2>আপনার পছন্দ ও নিয়ন্ত্রণ</h2>
+          <ul><li><strong>অ্যাকাউন্ট ছাড়া ব্যবহার:</strong> স্থানীয়ভাবে ব্যবহার চালিয়ে যান; Google সাইন-ইন ঐচ্ছিক।</li><li><strong>সিঙ্ক পরিচালনা:</strong> Settings → Account &amp; Sync থেকে সিঙ্ক চালু/বন্ধ করুন এবং কুরআনের নোট সিঙ্ক আলাদাভাবে বেছে নিন।</li><li><strong>লোকেশন পরিচালনা:</strong> Android settings-এ লোকেশন অনুমতি বন্ধ করুন, অথবা হাতে লোকেশন বেছে নিন। লোকেশন না দিলে লোকেশনভিত্তিক নামাজের সময় সুবিধাজনকভাবে পাওয়া নাও যেতে পারে।</li><li><strong>নোটিফিকেশন পরিচালনা:</strong> Android settings-এ নোটিফিকেশন/অ্যালার্ম অনুমতি ও অ্যাপের রিমাইন্ডার নিয়ন্ত্রণ করুন।</li><li><strong>ফোনের তথ্য মুছুন:</strong> যেখানে আছে অ্যাপের মুছে ফেলার নিয়ন্ত্রণ ব্যবহার করুন, An-Nur-এর storage clear করুন, অথবা অ্যাপ uninstall করুন। Android backup আলাদাভাবে device backup settings-এ সামলাতে হয়।</li><li><strong>সহায়তা নিন:</strong> গোপনীয়তা, তথ্য দেখা/সংশোধন/মুছে ফেলা নিয়ে ডেভেলপারকে ইমেইল করুন। ব্যবস্থা নেওয়ার আগে অ্যাকাউন্টটি আপনার কি না যাচাই করতে হতে পারে।</li></ul>
+        </section>
+        <section class="section" id="retention-bn">
+          <p class="section-kicker">০৬ · সংরক্ষণকাল</p><h2>তথ্য কত দিন থাকে</h2>
+          <p>আপনি নিজে না মোছা, অ্যাপের storage clear না করা বা আন-নূর uninstall না করা পর্যন্ত ফোনের তথ্য ফোনেই থাকে। Android-এর আলাদা device backup থাকলে সেটি আপনি না সামলানো পর্যন্ত থেকে যেতে পারে।</p>
+          <p>Firebase অ্যাকাউন্টের তথ্য ও সিঙ্ক করা রেকর্ড অ্যাকাউন্ট মুছে ফেলা বা মোছার অনুরোধ না করা পর্যন্ত অ্যাকাউন্টের সঙ্গে থাকে। মোছার অনুরোধে অ্যাপ ওই অ্যাকাউন্টের আন-নূর সিঙ্ক ও conflict রেকর্ড মুছে, তারপর Firebase Authentication অ্যাকাউন্ট মুছে দেয়। Google তার সেবার শর্ত ও গোপনীয়তা নীতিতে বর্ণিত সময় পর্যন্ত সীমিত service log বা backup copy রাখতে পারে।</p>
+          <p>সিঙ্ক বন্ধ করা, sign out, ফোনের local storage clear বা অ্যাপ uninstall করলে cloud data মুছে যায় না। Cloud data মুছতে অ্যাপের account deletion ব্যবহার করুন অথবা <a href="account-deletion.html">অ্যাকাউন্ট মুছে ফেলার পাতায়</a> অনুরোধ দিন।</p>
+        </section>
+        <section class="section" id="security-bn">
+          <p class="section-kicker">০৭ · নিরাপত্তা</p><h2>তথ্যের সুরক্ষা</h2>
+          <p>ঐচ্ছিক অ্যাকাউন্ট ও সিঙ্কের জন্য আন-নূর Firebase Authentication ও Cloud Firestore ব্যবহার করে। Firebase জানায় যে Firestore-এ তথ্য চলাচলের সময় এবং সংরক্ষিত অবস্থায় এনক্রিপ্ট করা হয়। অ্যাপের সঙ্গে দেওয়া Firestore rules প্রতিটি অ্যাকাউন্টকে শুধু তার নিজের রেকর্ডে সীমিত রাখার জন্য লেখা। এই সীমা কার্যকর হতে Firebase project-এ rules প্রকাশ করে সক্রিয় রাখতে হবে; বাস্তবে কোন access চলবে তা প্রকাশিত project settings-এর ওপর নির্ভর করে।</p>
+          <p>ক্লাউড সিঙ্ক <strong>end-to-end encrypted নয়</strong>: Firebase-এর service encryption ব্যবহৃত হয়, শুধু আপনার কাছে থাকা ব্যক্তিগত encryption key নয়। ডেভেলপারের Firebase project administrator এবং সেবা প্রদানকারী হিসেবে Google তাদের ভূমিকা ও শর্ত অনুযায়ী cloud data প্রযুক্তিগতভাবে প্রক্রিয়া করতে পারে। যে তথ্য কেবল আপনিই পড়তে পারবেন এমনভাবে রাখতে চান, সেটি সিঙ্ক চালু করে আপলোড করবেন না।</p>
+          <p>কোনো ইন্টারনেট সেবা বা সংরক্ষণ পদ্ধতিকে সম্পূর্ণ নিরাপদ নিশ্চিত করা যায় না। Google অ্যাকাউন্ট নিরাপদ রাখুন, ফোনে screen lock ব্যবহার করুন এবং আর ব্যবহার করেন না এমন ডিভাইস থেকে sign out করুন।</p>
+          <p><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase-এর গোপনীয়তা ও নিরাপত্তা তথ্য পড়ুন</a>।</p>
+        </section>
+        <section class="section" id="changes-bn">
+          <p class="section-kicker">০৮ · আপডেট</p><h2>এই নীতির পরিবর্তন</h2>
+          <p>অ্যাপের ফিচার, সেবা প্রদানকারী বা আইনি প্রয়োজন বদলালে এই নীতি হালনাগাদ হতে পারে। সর্বশেষ সংস্করণ ও কার্যকর তারিখ এই পাতায় থাকবে। ঐচ্ছিক ক্লাউড তথ্য কীভাবে ব্যবহৃত হয় তাতে উল্লেখযোগ্য পরিবর্তন হলে, প্রযোজ্য ক্ষেত্রে পরিবর্তন কার্যকর হওয়ার আগে বা সময়ে অ্যাপ বা এই পাতায় জানানো হবে।</p>
+          <div class="contact" id="contact-bn">
+            <h3>প্রশ্ন বা গোপনীয়তা-সংক্রান্ত অনুরোধ?</h3>
+            <p>আন-নূর ডেভেলপারের সঙ্গে যোগাযোগ করুন: <a href="mailto:arifmullikh.personal@gmail.com">arifmullikh.personal@gmail.com</a>।</p>
+            <p>অ্যাকাউন্ট মুছতে <strong>Settings → Account &amp; Sync → Delete account</strong> ব্যবহার করুন, অথবা <a href="account-deletion.html">অ্যাকাউন্ট মুছে ফেলার অনুরোধের পাতায়</a> যান। ইমেইলে কখনো password, Google sign-in token বা verification code পাঠাবেন না।</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <footer>
+    <div class="lang-en">An-Nur · Privacy Policy · Effective 29 October 2026 · <a href="mailto:arifmullikh.personal@gmail.com">Contact</a></div>
+    <div class="lang-bn" hidden>আন-নূর · গোপনীয়তা নীতি · কার্যকর ২৯ অক্টোবর ২০২৬ · <a href="mailto:arifmullikh.personal@gmail.com">যোগাযোগ</a></div>
+  </footer>
+  <script>
+    (() => {
+      const buttons = [...document.querySelectorAll('[data-language]')];
+      const groups = [...document.querySelectorAll('.lang-en, .lang-bn')];
+      function setLanguage(language) {
+        document.documentElement.lang = language;
+        groups.forEach((group) => { group.hidden = !group.classList.contains(`lang-${language}`); });
+        buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+        try { localStorage.setItem('annur-policy-language', language); } catch (_) { /* optional preference only */ }
+      }
+      let initial = 'en';
+      try { initial = localStorage.getItem('annur-policy-language') || (navigator.language.toLowerCase().startsWith('bn') ? 'bn' : 'en'); } catch (_) { /* use browser default */ }
+      setLanguage(initial === 'bn' ? 'bn' : 'en');
+      buttons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+    })();
+  </script>
 </body>
 </html>
