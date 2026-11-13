@@ -3,25 +3,166 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>An-Nur account deletion request</title>
+  <title>Account Deletion Request — An-Nur</title>
+  <meta name="description" content="Request deletion of your An-Nur account and synced cloud data. Compliant with Google Play Store 2026 guidelines.">
+  <meta name="theme-color" content="#06080d">
+  <link rel="icon" type="image/png" href="an_nur_logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { color-scheme: light; font: 16px/1.6 system-ui, sans-serif; color: #202124; background: #f7f8f7; }
-    body { margin: 0; padding: 24px; }
-    main { box-sizing: border-box; max-width: 680px; margin: 6vh auto; padding: 28px; border-radius: 20px; background: white; box-shadow: 0 8px 32px #10251a12; }
-    h1 { line-height: 1.2; }
-    a.button { display: inline-block; margin: 8px 0; padding: 12px 18px; border-radius: 12px; background: #16866d; color: white; text-decoration: none; font-weight: 650; }
-    .note { color: #5f6368; font-size: .94rem; }
+    :root {
+      --bg: #06080d;
+      --bg-card: rgba(16, 22, 36, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #10b981;
+      --danger: #ef4444;
+      --text: #f3f4f6;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-en: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-en);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.65;
+    }
+    .card {
+      max-width: 680px;
+      width: 100%;
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+    .steps {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .steps h3 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .steps ol {
+      padding-left: 20px;
+      color: var(--text-muted);
+    }
+    .steps li {
+      margin-bottom: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--danger) 0%, #b91c1c 100%);
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin: 10px 0 20px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.45);
+    }
+    .note {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: 20px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-<main>
-  <h1>Request deletion of your An-Nur account</h1>
-  <p>If you can open An-Nur, use <strong>Settings → Account &amp; Sync → Delete account</strong>. The app will ask you to sign in again, remove the Firebase account and its synced An-Nur records, and keep your local device data unchanged.</p>
-  <p>If you cannot access the app, email the developer from the address used for your An-Nur account and request account deletion. Do not include your password or sign-in tokens.</p>
-  <p><a class="button" href="mailto:arifmullikh.personal@gmail.com?subject=An-Nur%20account%20deletion%20request">Email an account deletion request</a></p>
-  <p class="note">The developer may ask you to verify account ownership before processing a request. A deletion request removes your Firebase account and synced records. It does not erase records or backups saved only on your device or in a local backup file; clear the app's storage or uninstall the app to remove local data.</p>
-  <p class="note">This page must be published at a stable HTTPS address and monitored by the app developer before it is submitted as the Play Store account deletion URL.</p>
-</main>
+  <main class="card">
+    <div class="header">
+      <img src="an_nur_logo.png" alt="An-Nur Logo" class="logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Request An-Nur Account Deletion</h1>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-dim);">Google Play Store 2026 Compliant Deletion Portal</p>
+      </div>
+    </div>
+
+    <p>We respect your privacy and provide simple mechanisms to delete your cloud-synchronized An-Nur account and all associated cloud data at any time.</p>
+
+    <div class="steps">
+      <h3>Method 1: Direct In-App Deletion (Instant)</h3>
+      <ol>
+        <li>Open the <strong>An-Nur</strong> app on your Android device.</li>
+        <li>Go to <strong>Settings → Account & Cloud Sync</strong>.</li>
+        <li>Tap <strong>Delete Account & Cloud Data</strong> and confirm.</li>
+      </ol>
+      <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 8px;">Your cloud authentication profile, stored sync tokens, and cloud bookmarks will be permanently erased immediately.</p>
+    </div>
+
+    <div class="steps">
+      <h3>Method 2: Email Deletion Request (Within 48h)</h3>
+      <p>If you have uninstalled the app or cannot access your device, email us directly from the address associated with your Google / An-Nur account.</p>
+      <a class="btn" href="mailto:arifmullikh.personal@gmail.com?subject=An-Nur%20Account%20Deletion%20Request&body=Please%20delete%20my%20An-Nur%20account%20and%20all%20associated%20cloud%20sync%20data.%20My%20registered%20email%20address%20is:%20">
+        ✉️ Submit Deletion Request via Email
+      </a>
+    </div>
+
+    <div class="note">
+      <strong>Data Retention Policy:</strong> When account deletion is completed, all cloud-synced Quran bookmarks, notes, and profile records are permanently removed from our Firebase/Supabase database. Local on-device data remains on your physical phone; you can erase all local data simply by clearing the app data in Android Settings or uninstalling the app.
+    </div>
+
+    <a href="index.html" class="back-link">← Return to Privacy Policy</a>
+  </main>
 </body>
 </html>
